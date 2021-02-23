@@ -1,0 +1,114 @@
+/*
+body {
+    background-color: lightgray;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+.calculator > p[style='grid-area: screen'] {
+    grid-column: 1 / span 4;
+    padding-right: 10px;
+    background-color: white;
+    text-align: right;
+    vertical-align: middle;
+}
+
+*/
+
+
+
+html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+    }
+
+body {
+    margin: 0;
+    background-color: lightgray;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: monospace, Arial, Helvetica, sans-serif;
+}
+.calculator {
+    width: 400px;
+    height: 600px;
+    border: 1px solid black;
+    border-radius: 15px;
+    background-color: black;
+    padding: 10px;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+}
+.display {
+    grid-column: span 4;
+    background-color: rgb(30,30,30);
+    color: white;
+    margin: 0 10px;
+    border-radius: 5px;
+    padding-right: 10px;
+    height: 75%;
+    display: inline-flex;
+    flex-direction: row-reverse;
+    align-self: center;
+    align-items: center;
+    font-size: xx-large;
+}
+button {
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    outline: none;
+    width: 75%;
+    height: 75%;
+    border-radius: 25%; /* mudar para 25%*/
+    font-size: large;
+    transition: all 1s ease;
+}
+button:hover {
+    cursor: pointer;
+}
+
+#btn-num__0 {
+    width: 85%;
+    border-radius: 10%/25%;
+    justify-content: left;
+    padding-left: 12.5%;
+}
+
+.btn-num {
+    background-color: rgb(30,30,30);
+    color: white;
+}
+.btn-num:hover {background-color: rgb(105, 105, 105)}
+
+.btn-op {
+    background-color: orange;
+    color: white;
+    font-size: 30px
+}
+.btn-op:hover, .op-selected {
+    background-color: white;
+    color: orange;
+}
+
+.btn-stat {
+    color: black;
+    background-color: lightgray;
+}
+.btn-stat:hover {background-color: rgb(243, 243, 243)}
